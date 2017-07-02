@@ -28,3 +28,10 @@ var fib2 = memoize(function(num) {
 
 fib2(50)
 //  12586269025
+
+// or using recursion:
+
+var fib3 = memoize(num => {
+  if (num === 0 || num === 1) return num;
+  else return fib3(num - 1) + fib3(num - 2);
+});

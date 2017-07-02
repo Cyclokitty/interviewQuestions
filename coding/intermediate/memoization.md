@@ -2,7 +2,35 @@ What the fudge is memoization?
 ==========
 [From](https://addyosmani.com/blog/faster-javascript-memoization/)
 
-* remembering the results for inputs of a specific value to a function
+* remembering the results for inputs of a specific value to a
+
+* using recursion and fibonacci series:
+
+```
+function memoize(func) {
+  var cache = {};
+  return function() {
+    var key = JSON.stringify(arguments);
+    if (cache[key]) {
+      return cache[key];
+    }
+    else {
+      var val = func.apply(this, arguments);
+      cache[key] = val;
+      return val;
+    }
+  };
+}
+
+var fibRecurs = memoize(num => {
+  console.log('working for fibRecurs(' + num +  ')');
+  if (num === 0 || num === 1) return num;
+   else return fibRecurs(num - 1) + fibRecurs(num - 2);
+});
+
+fibRecurs(50);
+
+```
 
 [From](http://inlehmansterms.net/2015/03/01/javascript-memoization/)
 

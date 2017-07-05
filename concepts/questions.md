@@ -2,8 +2,10 @@ The Concepts Questions
 =======================
 
 1. What is Big O notation, and why is it useful?
+  Big O measures how much time and memory  the computer uses to complete an algorithm. Especially as the data used in the algorithm increases in size.
 
 2. What is the DOM?
+    * Document Object Model is the api that allows JavaScript and CSS to access all of the nodes, which are set up in a tree structure.
 
 3. What is the event loop?
 

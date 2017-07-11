@@ -8,7 +8,7 @@ The Concepts Questions
     * Document Object Model is the api that allows JavaScript and CSS to access all of the nodes, which are set up in a tree structure.
 
 3. What is the event loop?
-    * JS uses the stack to run functions, the heap to allocate memory, and webapis provided by the browser to do our extra stuff (like DOM)
+    * JS uses the stack to run functions, the heap to allocate memory, and webapis provided by the browser to do other stuff (like DOM, AJAX)
     * the functions are placed on the stack when called, and functions called from webapis work in the browser, and any cbs from the webapi methods then line up the js callbacks in the task queue
     * The event loop looks at the stack and the task queue and when the stack is empty, push the the next item in the task queue onto the stack for running.
     * the important thing is not to add slow, delaying synchronous code to the stack or else the browser cannot cleanly render the UI for the client (ex. when you can't click or do an action on the screen, the render is blocked --- non-blocking is the way to go)

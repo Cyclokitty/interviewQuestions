@@ -14,7 +14,7 @@ The Concepts Questions
     * the important thing is not to add slow, delaying synchronous code to the stack or else the browser cannot cleanly render the UI for the client (ex. when you can't click or do an action on the screen, the render is blocked --- non-blocking is the way to go)
 
 4. What is a closure?
-
+  (woo short question, big answer. See closure.md)
 5. How does prototypal inheritance work, and how is it different from classical inheritance?
 
 6. How does ``` this ``` work?
